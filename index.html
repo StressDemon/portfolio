@@ -9,8 +9,26 @@
   </head>
   <body>
     <canvas id="backgroundCanvas"></canvas>
-    <div class="survey">Help me with a quick survey!</div>
-    <div class="row">
+    <div class="welcome">
+      <div class="slice slice-0"></div>
+      <div class="slice slice-1"></div>
+      <div class="slice slice-2"></div>
+      <div class="slice slice-3"></div>
+      <div class="slice slice-4"></div>
+      <div class="slice slice-5"></div>
+    </div>
+    <div class="survey">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSc78IrHE8h1ET9kOCGqIFuVsiAzg9W370y4FUYWvBHshArwpQ/viewform?usp=header"
+        >Help me with a quick survey!</a
+      >
+    </div>
+    <div class="scrollbar">
+      <div id="scrollBar"></div>
+    </div>
+    <div class="email">tarekmsolli@gmail.com</div>
+    <div class="preview"></div>
+    <div class="row hero">
       <div class="introduction">
         <div class="title">
           <div class="fade-up">WEB DEVELOPMENT</div>
@@ -20,7 +38,15 @@
           Hi! I'm Tarek. A creative web development student in Esprit with a
           degree in software development from ISTIC.<span></span>
         </div>
-        <button class="btn fade-up">HIRE ME</button>
+        <a href="https://github.com/StressDemon/" target="_blank"
+          ><button class="btn fade-up">Github</button></a
+        >
+        <a href="https://tn.linkedin.com/in/tarek-msolli" target="_blank"
+          ><button class="btn fade-up">LinkedIn</button></a
+        >
+      </div>
+      <div class="location">
+        <img src="./assets/Esprit.png" alt="" />
       </div>
     </div>
     <div class="arrow-icon"></div>
@@ -50,8 +76,158 @@
         </div>
       </div>
     </div>
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
+    <div class="row">
+      <small class="fade-up"
+        ><img src="./assets/cog.svg" alt="" />My stack</small
+      >
+      <div class="split">
+        <div class="col title">FrontEnd</div>
+        <div class="col tech">
+          <div class="item fade-up">
+            <img src="./assets/js.svg" alt="" srcset="" />
+            <p>Javascript</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/sass.svg" alt="" srcset="" />
+            <p>SASS</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/bootstrap.svg" alt="" srcset="" />
+            <p>bootstrap</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/JavaFX.png" alt="" srcset="" />
+            <p>JavaFX</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/tailwind.svg" alt="" srcset="" />
+            <p>Tailwind</p>
+          </div>
+        </div>
+      </div>
+      <div class="split">
+        <div class="col title">BackEnd</div>
+        <div class="col tech">
+          <div class="item fade-up">
+            <img src="./assets/nodejs.svg" alt="" srcset="" />
+            <p>Node JS</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/symfony.svg" alt="" srcset="" />
+            <p>Symfony</p>
+          </div>
+        </div>
+      </div>
+      <div class="split">
+        <div class="col title">Database</div>
+        <div class="col tech">
+          <div class="item fade-up">
+            <img src="./assets/pgsql.svg" alt="" srcset="" />
+            <p>PostgreSQL</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/xampp.svg" alt="" srcset="" />
+            <p>Xampp</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/mongo.svg" alt="" srcset="" />
+            <p>Mongo</p>
+          </div>
+        </div>
+      </div>
+      <div class="split">
+        <div class="col title">Tools</div>
+        <div class="col tech">
+          <div class="item fade-up">
+            <img src="./assets/git.svg" alt="" srcset="" />
+            <p>Git</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/unity.svg" alt="" srcset="" />
+            <p>Unity</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/figma.svg" alt="" srcset="" />
+            <p>Figma</p>
+          </div>
+          <div class="item fade-up">
+            <img src="./assets/blender.svg" alt="" srcset="" />
+            <p>Blender</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <small
+        ><img src="./assets/time.svg" alt="" srcset="" />My experience</small
+      >
+      <div
+        class="experience fade-up"
+        data-tooltip="Led a team of graphic designers to organize club events and workshops. in addition to tutoring students in graphic design, game development and software development."
+        data-preview="url('./assets/igc.jpg')"
+      >
+        <small>Google Club</small>
+        <div class="job">Graphic Design Leader / Tutor</div>
+        <small>2021</small>
+      </div>
+      <div
+        class="experience fade-up"
+        data-tooltip="Designed posters, banners and flyers for club events."
+        data-preview="url('./assets/enactus.png')"
+      >
+        <small>Enactus</small>
+        <div class="job">Graphic Designer</div>
+        <small>2022</small>
+      </div>
+      <div
+        class="experience fade-up"
+        data-tooltip="Developed a computer maintenance ticket system to help the maintenance team manage their tasks and track the status of each ticket."
+        data-preview="url('./assets/Generate Report.png')"
+      >
+        <small>CNSS</small>
+        <div class="job">FrontEnd Developer</div>
+        <small>2023</small>
+      </div>
+      <div
+        class="experience fade-up"
+        data-tooltip="Worked on a game jam project with a team of developers and designers. I was responsible for the game design and development, as well as the graphics."
+        data-preview="url('./assets/forest.jpg')"
+      >
+        <small>Global Game Jam</small>
+        <div class="job">Video Game Developer</div>
+        <small>2023</small>
+      </div>
+      <div
+        class="experience fade-up"
+        data-tooltip="Created movie production level video trailers for the club's events. I was responsible for the video editing and graphics."
+        data-preview="url('./assets/camp of secrets.jpg')"
+      >
+        <small>Universe</small>
+        <div class="job">Video Editor</div>
+        <small>2023</small>
+      </div>
+      <div
+        class="experience fade-up"
+        data-tooltip="Worked on video editing and graphic design for the club's social media."
+        data-preview="url('./assets/maker.png')"
+      >
+        <small>Makerlabs</small>
+        <div class="job">Graphic Designer</div>
+        <small>2024</small>
+      </div>
+      <div
+        class="experience fade-up"
+        data-tooltip="Worked in a team of two to develop an employee management system for Tessan Group. I was responsible for the mobile application development and part of the backend API."
+        data-preview="url('./assets/Sign in.png')"
+      >
+        <small>TESSAN Group</small>
+        <div class="job">Full Stack Developer</div>
+        <small>2024</small>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="ask">want me to work on something for you?</p>
+      <p class="answer">tarekmsolli@gmail.com</p>
+    </div>
   </body>
 </html>

@@ -92,3 +92,48 @@ fadeUpElements.forEach((element) => {
     element.classList.add("animate");
   }
 });
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const scrollHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / scrollHeight) * 100;
+  const scrollBar = document.getElementById("scrollBar");
+  scrollBar.style.height = scrollPercent + "%";
+});
+
+const preview = document.querySelector(".preview");
+const experiences = document.querySelectorAll(".experience");
+
+experiences.forEach((experience) => {
+  experience.addEventListener("mouseenter", () => {
+    const previewBackground = experience.getAttribute("data-preview");
+    preview.style.backgroundImage = previewBackground;
+  });
+
+  experience.addEventListener("mouseleave", () => {
+    preview.style.backgroundImage = "";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const introElement = document.querySelector(".intro");
+  const introText = introElement.childNodes[0].textContent.trim();
+  const spanElement = introElement.querySelector("span");
+  introElement.textContent = "";
+
+  setTimeout(() => {
+    let index = 0;
+
+    const typeEffect = () => {
+      if (index < introText.length) {
+        introElement.textContent = introText.slice(0, index + 1);
+        if (spanElement) introElement.appendChild(spanElement);
+        index++;
+        setTimeout(typeEffect, 20);
+      }
+    };
+
+    typeEffect();
+  }, 1000);
+});
