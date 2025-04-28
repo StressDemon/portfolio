@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pointDown {
+  0% {
+    transform: translateY(-140px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
+* {
+  --anton: "Anton", "Avro";
+  --quicksand: "Quicksand";
+  --primary-color: #212121;
+  --secondary-color: yellow;
+  --teriary-color: white;
+  --accent-color: black;
+  cursor: url("./assets/cursor.cur"), auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+}
+
+#backgroundCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.survey {
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 35px;
+  position: fixed;
+  color: var(--teriary-color);
+  display: grid;
+  place-items: center;
+  font-family: var(--quicksand);
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.survey:hover {
+  color: var(--secondary-color);
+}
+
+.row {
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.introduction {
+  max-width: 544px;
+  margin-left: 50pxh;
+  margin-top: 100px;
+}
+
+.introduction .title {
+  font-family: var(--anton);
+  color: var(--secondary-color);
+  font-size: 4.5rem;
+}
+
+.introduction .title #accent-title {
+  display: inline-block;
+  color: var(--teriary-color);
+  transform: translate(20px, -40px);
+}
+
+.introduction .intro {
+  color: var(--teriary-color);
+  font-family: var(--quicksand);
+  transform: translate(0, -30px);
+}
+
+.introduction .intro span {
+  border: 1px solid var(--teriary-color);
+  animation: blink 1s infinite;
+  margin-left: 5px;
+}
+
+.introduction .btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 10px 30px;
+  border: none;
+  font-family: var(--anton);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 200px;
+  height: 200px;
+  background: url("./assets/arrow-thick-thin-down.svg") no-repeat center;
+  background-size: contain;
+  margin: 0 auto;
+  transform: translateY(-120px);
+  animation: pointDown 2s infinite ease-in-out;
+}
+
+.row :has(.message) {
+  margin: 0;
+}
+
+.message {
+  font-family: var(--quicksand);
+  font-size: 2.5rem;
+  color: var(--teriary-color);
+  text-align: left;
+  transform: translateY(-50px);
+}
+
+small {
+  color: var(--teriary-color);
+  font-family: var(--quicksand);
+  font-size: 1.5rem;
+}
+
+.splitter {
+  border: 1px solid var(--teriary-color);
+  opacity: 0.3;
+  margin: 25px 0;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  color: var(--teriary-color);
+  font-family: var(--quicksand);
+  text-align: left;
+  gap: 100px;
+}
+
+.split .col.name {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  grid-column: 1 / span 2;
+}
+
+.split .col.description {
+  font-size: 1.5rem;
+  grid-column: 3 / span 3;
+}
